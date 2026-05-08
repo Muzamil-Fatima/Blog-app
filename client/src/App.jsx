@@ -5,6 +5,7 @@ import CreatePost from "./pages/CreatePost";
 import Footer from "./components/Footer";
 import Blogs from "./pages/Blogs";
 import Navbar from "./components/Navbar";
+import BlogDetails from "./pages/BlogDetails";
 function App() {
   return (
     <>
@@ -14,6 +15,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/create" element={<CreatePost />} />
         <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blog/:id" element={<BlogDetails />} />
       </Routes>
       <Footer />
     </>

@@ -13,44 +13,37 @@ function Dashboard() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-linear-to-b from-slate-950 to-slate-900 text-white px-4 sm:px-6 md:px-10 py-10">
+    <div className="min-h-screen bg-linear-to-b from-slate-950 to-slate-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-10">
 
-      {/* Header */}
-      <div className="mb-10 sm:mb-12">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold">
+        <h1 className="text-3xl sm:text-5xl font-bold mb-2">
           Dashboard <span className="text-cyan-400">Overview</span>
         </h1>
-        <p className="text-slate-400 mt-2 text-sm sm:text-base">
-          Track your blog performance in real time
+
+        <p className="text-slate-400 mb-10">
+          Track your blog performance
         </p>
-      </div>
 
-      {/* Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-        <div className="bg-linear-to-br from-cyan-600 to-blue-700 p-6 sm:p-8 rounded-2xl shadow-lg hover:scale-105 transition">
-          <h2 className="text-lg sm:text-xl font-semibold">Total Blogs</h2>
-          <p className="text-4xl sm:text-5xl font-bold mt-4">
-            {stats.totalBlogs}
-          </p>
-        </div>
+          <div className="bg-linear-to-br from-cyan-600 to-blue-700 p-6 rounded-2xl">
+            <h2>Total Blogs</h2>
+            <p className="text-4xl font-bold mt-2">{stats.totalBlogs}</p>
+          </div>
 
-        <div className="bg-linear-to-br from-purple-600 to-pink-600 p-6 sm:p-8 rounded-2xl shadow-lg hover:scale-105 transition">
-          <h2 className="text-lg sm:text-xl font-semibold">Total Views</h2>
-          <p className="text-4xl sm:text-5xl font-bold mt-4">
-            {stats.views}
-          </p>
-        </div>
+          <div className="bg-linear-to-br from-purple-600 to-pink-600 p-6 rounded-2xl">
+            <h2>Views</h2>
+            <p className="text-4xl font-bold mt-2">{stats.views}</p>
+          </div>
 
-        <div className="bg-linear-to-br from-green-500 to-emerald-600 p-6 sm:p-8 rounded-2xl shadow-lg hover:scale-105 transition">
-          <h2 className="text-lg sm:text-xl font-semibold">Comments</h2>
-          <p className="text-4xl sm:text-5xl font-bold mt-4">
-            {stats.comments}
-          </p>
+          <div className="bg-linear-to-br from-green-500 to-emerald-600 p-6 rounded-2xl">
+            <h2>Comments</h2>
+            <p className="text-4xl font-bold mt-2">{stats.comments}</p>
+          </div>
+
         </div>
 
       </div>
-
     </div>
   );
 }
